@@ -49,12 +49,10 @@ export const ContactsPage = ({contacts, addContact}) => {
               email={email}
               setEmail={setEmail}
               handleSubmit={handleSubmit} />
-        <p>{addContact}</p>
       </section>
       <hr />
         <section>
             <h2>contacts</h2>
-            <p>{contacts}</p>
             <TileList contacts={contacts} />
         </section>
     </div>
