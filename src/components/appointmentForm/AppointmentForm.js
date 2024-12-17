@@ -10,15 +10,15 @@ const getTodayString = () => {
 
 export const AppointmentForm = ({
   contacts,
-  title,
-  setTitle,
   contact,
   setContact,
   date,
   setDate,
   time,
   setTime,
-  handleSubmit
+  handleSubmit,
+  name,
+  setName
 }) => {
 
 
@@ -29,8 +29,8 @@ export const AppointmentForm = ({
           <input
               id="name"
               type="text"
-              value={contact.name}
-              onChange={(e) => contact.name.setName(e.target.value)}
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               required
           />
           <label htmlFor="date">Date</label>
@@ -39,7 +39,7 @@ export const AppointmentForm = ({
               type="time"
               value={date}
               onChange={(e) => setDate(e.target.value)}
-              min={getTodayString()}
+              //min={getTodayString()}
               required
           />
           <label htmlFor="time">Time</label>
